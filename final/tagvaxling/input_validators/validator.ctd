@@ -1,0 +1,10 @@
+INT(1, 100, n)
+NEWLINE
+
+REPI(i, n, SPACE)
+	INT(1, n, a[i])
+END
+NEWLINE
+EOF
+
+ASSERT(UNIQUE(a))
