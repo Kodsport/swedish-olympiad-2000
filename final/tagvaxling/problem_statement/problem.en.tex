@@ -1,0 +1,21 @@
+\problemname{Train Switching}
+
+\includegraphics{tag.png}
+
+On the top track (called the input track) there is a train with $n \le 100$ cars, numbered from 1 to $n$ starting from the front car. On the lower track (called the output track) you see the same cars in the desired order as the train leaves the switching area.
+
+The order of the cars can be changed by pushing them onto the siding (which is long enough to hold all cars at once). Only two movements are allowed:
+
+\begin{itemize}
+\item The first car on the input track to the last position on the siding
+\item The last car on the siding to the last position on the output track
+\end{itemize}
+Write a program that receives the desired order on the output track and determines whether this order is possible to achieve. The order of the $n$ cars on the input track is always in ascending numerical order from first to last car.
+
+\section*{Input}
+The first line of input consists of the number $n$.
+
+The next line consists of $n$ integers --- the desired order of the cars.
+
+\section*{Output}
+If it is possible to reach the desired arrangement, output \texttt{JA}. Otherwise, output \texttt{NEJ}.
