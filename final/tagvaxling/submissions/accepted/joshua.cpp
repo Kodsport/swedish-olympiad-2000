@@ -1,76 +1,36 @@
-#include <iostream>
-#include <vector>
-#include <map>
-#include <sstream>
-#include <algorithm>
-#include <cmath>
-#include <set>
-#include <unordered_set>
-#include <string>
-#include <iterator>
-#include <queue>
-#include <tuple>
-#include <numeric>
-#include <random>
-#include <time.h>
-#include <stack>
-#include <chrono>
-#include <unordered_map>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-#define vi vector<ll>
-#define vvi vector<vi>
-#define p2 pair<ll, ll>
-#define p3 vi
-#define p4 vi
-#define inf 2e9
+using ll = long long;
+using vi = vector<ll>;
+using vvi = vector<vi>;
+using p2 = pair<ll,ll>;
+const ll inf = 1e18;
 
-#define read(a) cin >> a
-#define write(a) cout << (a) << endl
-#define deb __debugbreak();
-
-#define readpush(type,a) type temp; read(temp); a.push_back(temp)
-#define readinsert(type,a) type temp; read(temp); a.insert(temp)
-#define setcontains(set, x) (set.find(x) != set.end())
-#define all(a) begin(a),end(a)
-
-#define rep(i, high) for (ll i = 0; i < high; i++)
-#define repe(i, container) for (auto& i : container)
-#define per(i, high) for (ll i = high; i >= 0; i--)
-
-#define ceildiv(x,y) ((x + y - 1) / y)
+#define repe(i, arr) for (auto& i : arr)
+#define rep(i, b) for(ll i = 0; i < (b); ++i)
+#define repp(i, a, b) for(ll i = a; i < (b); ++i)
+#define all(x) begin(x),end(x)
+#define sz(x) ((ll)x.size())
 
 
-inline void fast()
-{
-    ios::sync_with_stdio(false);
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
-}
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
 
-int main()
-{
-    fast();
+    ll n;
+    cin >> n;
 
-    int n;
-    read(n);
-
-    queue<int> in;
+    queue<ll> in;
     rep(i, n)
     {
         in.push(i+1);
     }
     
-    stack<int> stick;
+    stack<ll> stick;
 
-    vector<int> order;
-    int i = 0;
-    rep(i, n)
-    {
-        readpush(int, order);
-    }
+    vector<ll> order(n);
+    ll i = 0;
+    rep(i, n) cin >> order[i];
 
     while (in.size())
     {
@@ -92,13 +52,14 @@ int main()
 
     if (i == n)
     {
-        write("JA");
+        cout << "JA\n";
     }
     else
     {
-        write("NEJ");
+        cout << "NEJ\n";
     }
 
 
     return 0;
 }
+
